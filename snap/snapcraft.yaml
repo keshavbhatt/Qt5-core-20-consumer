@@ -46,7 +46,7 @@ parts:
        - build-essential
        - qtbase5-dev
      source: https://github.com/keshavbhatt/Qt5-core-20-consumer.git
-     source: src/
+     source-subdir: src/
      plugin: qmake
             
         
