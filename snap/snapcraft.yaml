@@ -14,7 +14,6 @@ confinement: strict
 apps:
   qt5-core20-test:
     command: desktop-launch qt5test
-    environment:
     plugs:
         - avahi-observe
         - browser-support
@@ -68,4 +67,3 @@ plugs:
     interface: content
     target: $SNAP/qt5-core20
     default-provider: qt5-core20
-
