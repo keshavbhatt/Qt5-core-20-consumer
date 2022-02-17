@@ -20,7 +20,7 @@ environment:
 
 apps:
   qt5-core20-test:
-    command: desktop-launch usr/bin/qt5test
+    command: desktop-launch qt5test
     plugs:
         - avahi-observe
         - browser-support
