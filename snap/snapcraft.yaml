@@ -13,7 +13,7 @@ confinement: strict
 
 apps:
   qt5-core20-test:
-    command: desktop-launch qt5test
+    command: qt5test
     plugs:
         - avahi-observe
         - browser-support
@@ -49,7 +49,6 @@ parts:
      source-subdir: src/
      plugin: qmake
             
-        
 plugs:
   gtk-3-themes:
     interface: content
