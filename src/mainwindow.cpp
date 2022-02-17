@@ -42,5 +42,5 @@ void MainWindow::on_saveDialogPb_clicked() {
 }
 
 void MainWindow::on_nativecheckBox_stateChanged(int arg1) {
-  qDebug() << QString(arg1 ? "useQtNative" : "useSystemNative");
+  qDebug() << QString(arg1 ? "useSystemNative" : "useQtNative");
 }

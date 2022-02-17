@@ -17,7 +17,7 @@ architectures:
 
 apps:
   qt5-core20-test:
-    command: qt5test
+    command: $SNAP/usr/bin/qt5test
     plugs:
         - avahi-observe
         - browser-support
