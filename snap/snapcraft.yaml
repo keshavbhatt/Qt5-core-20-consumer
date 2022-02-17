@@ -14,10 +14,13 @@ confinement: strict
 architectures:
   - build-on: amd64
     run-on: amd64
+    
+environment:
+  SNAP_DESKTOP_RUNTIME: $SNAP/qt5-core20
 
 apps:
   qt5-core20-test:
-    command: usr/bin/qt5test
+    command: desktop-launch usr/bin/qt5test
     plugs:
         - avahi-observe
         - browser-support
@@ -48,6 +51,9 @@ parts:
        - qtbase5-dev
      source: https://github.com/keshavbhatt/Qt5-core-20-consumer.git
      source-subdir: src/
+   snap-launcher:
+     plugin: dump
+     source: snap_launcher/
             
 plugs:
   gtk-3-themes:
