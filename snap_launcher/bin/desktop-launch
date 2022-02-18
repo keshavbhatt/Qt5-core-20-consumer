@@ -37,7 +37,7 @@ else
 fi
 
 MIME_DIRECTORY="$XDG_DATA_HOME/mime"
-if [ ! -d "$MIME_DIRECTORY" ]
+if [ ! -d "$MIME_DIRECTORY" ]; then
   needs_update=true
 fi
 
