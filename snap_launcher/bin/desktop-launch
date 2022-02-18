@@ -28,14 +28,18 @@ function wait_for_async_execs() {
 }
 
 # shellcheck source=/dev/null
-
+#needs_update=true
 source "$SNAP_USER_DATA/.last_revision" 2>/dev/null || true
 if [ "$SNAP_DESKTOP_LAST_REVISION" = "$SNAP_REVISION" ]; then
   needs_update=false
 else
   needs_update=true
 fi
-
+#update mime of mime dir doesn't exist
+MIME_DIRECTORY="$XDG_DATA_HOME/mime"
+if [ ! -d "$MIME_DIRECTORY" ]; then
+  needs_update=true
+fi
 
 # Set $REALHOME to the users real home directory
 REALHOME=$(getent passwd $UID | cut -d ':' -f 6)
