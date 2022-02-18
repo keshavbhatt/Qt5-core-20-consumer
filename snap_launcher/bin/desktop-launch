@@ -28,6 +28,7 @@ function wait_for_async_execs() {
 }
 
 # shellcheck source=/dev/null
+needs_update=true
 source "$SNAP_USER_DATA/.last_revision" 2>/dev/null || true
 if [ "$SNAP_DESKTOP_LAST_REVISION" = "$SNAP_REVISION" ]; then
   needs_update=false
